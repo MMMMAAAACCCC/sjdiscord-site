@@ -87,7 +87,7 @@ h1{font-size:min(70px,calc((100vw - 40px)/12))!important;line-height:1.25}
 <header>
 <h1>South Jersey<br>Discord</h1>
 <div style="color:#0ff">★ Welcome to my homepage on the World Wide Web! ★</div>
-<div class="join"><a href="https://discord.gg/YXBPN4Dv5c">JOIN NOW!</a><p class="blink" style="color:#ff0">&gt;&gt; it's FREE!! &lt;&lt;</p></div>
+<div class="join"><a href="https://discord.gg/YXBPN4Dv5c" data-goatcounter-click="join-click" data-goatcounter-title="Join button click">JOIN NOW!</a><p class="blink" style="color:#ff0">&gt;&gt; it's FREE!! &lt;&lt;</p></div>
 </header>
 <div class="marq"><div>★ Meetups * voice chats * video games with South Jersey locals ★ &nbsp;&nbsp;&nbsp; ★ Meetups * voice chats * video games with South Jersey locals ★ &nbsp;&nbsp;&nbsp; ★ Meetups * voice chats * video games with South Jersey locals ★ &nbsp;&nbsp;&nbsp; ★ Meetups * voice chats * video games with South Jersey locals ★ &nbsp;&nbsp;&nbsp; ★ Meetups * voice chats * video games with South Jersey locals ★ &nbsp;&nbsp;&nbsp; ★ Meetups * voice chats * video games with South Jersey locals ★ &nbsp;&nbsp;&nbsp; </div></div>
 <div class="cards">
@@ -103,23 +103,10 @@ h1{font-size:min(70px,calc((100vw - 40px)/12))!important;line-height:1.25}
 <p style="font-size:16px;color:#0ff">Not affiliated with Discord Inc. © 1998–2026</p></footer>
 </div><script>
 (function(){
-  var WEB='https://discord.gg/YXBPN4Dv5c';
-  var APP='discord://invite/YXBPN4Dv5c';
-  var INTENT='intent://invite/YXBPN4Dv5c#Intent;scheme=discord;package=com.discord;S.browser_fallback_url=https%3A%2F%2Fdiscord.gg%2FYXBPN4Dv5c;end';
   var links=document.querySelectorAll('a[href="https://discord.gg/YXBPN4Dv5c"]');
   for(var i=0;i<links.length;i++){
-    links[i].addEventListener('click',function(e){
-      e.preventDefault();
+    links[i].addEventListener('click',function(){
       try{if(typeof window.fbq==='function') window.fbq('trackCustom','JoinClick');}catch(err){}
-      var android=/Android/i.test(navigator.userAgent);
-      if(android){
-        window.location=INTENT;
-      }else{
-        window.location=APP;
-        setTimeout(function(){
-          if(document.visibilityState==='visible') window.location=WEB;
-        },1200);
-      }
     });
   }
 })();
