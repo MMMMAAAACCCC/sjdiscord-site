@@ -103,10 +103,18 @@ h1{font-size:min(70px,calc((100vw - 40px)/12))!important;line-height:1.25}
 <p style="font-size:16px;color:#0ff">Not affiliated with Discord Inc. © 1998–2026</p></footer>
 </div><script>
 (function(){
-  var links=document.querySelectorAll('a[href="https://discord.gg/YXBPN4Dv5c"]');
+  var AD_INVITE='https://discord.gg/wjTRXAhXrc';
+  var fromMeta=false;
+  try{fromMeta=/^meta$/i.test(new URLSearchParams(location.search).get('utm_source')||'');}catch(e){}
+  var links=document.querySelectorAll('.join a');
   for(var i=0;i<links.length;i++){
+    if(fromMeta){
+      links[i].href=AD_INVITE;
+      links[i].setAttribute('data-goatcounter-click','join-click-meta');
+      links[i].setAttribute('data-goatcounter-title','Join button click (Meta ad invite)');
+    }
     links[i].addEventListener('click',function(){
-      try{if(typeof window.fbq==='function') window.fbq('trackCustom','JoinClick');}catch(err){}
+      try{if(typeof window.fbq==='function') window.fbq('trackCustom','JoinClick',{invite:fromMeta?'meta_ad':'default'});}catch(err){}
     });
   }
 })();
